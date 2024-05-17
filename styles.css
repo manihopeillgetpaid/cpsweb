@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'TT Lakes';
-    src: url('/fontss/TTLakes-Regular.eot');
+    src: url('/fonts/TTLakes-Regular.eot');
     src: local('TT Lakes Regular'), local('TTLakes-Regular'),
-        url('/fontss/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/fontss/TTLakes-Regular.woff') format('woff'),
-        url('/fontss/TTLakes-Regular.ttf') format('truetype');
+        url('/fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/TTLakes-Regular.woff') format('woff'),
+        url('/fonts/TTLakes-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'TT bold';
-    src: url('/fontss/TTLakes-DemiBold.eot');
+    src: url('/fonts/TTLakes-DemiBold.eot');
     src: local('TT Lakes DemiBold'), local('TTLakes-DemiBold'),
-        url('/fontss/TTLakes-DemiBold.eot?#iefix') format('embedded-opentype'),
-        url('/fontss/TTLakes-DemiBold.woff') format('woff'),
-        url('/fontss/TTLakes-DemiBold.ttf') format('truetype');
+        url('/fonts/TTLakes-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/TTLakes-DemiBold.woff') format('woff'),
+        url('/fonts/TTLakes-DemiBold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -24,6 +24,7 @@ body{
     width: 100%;
     margin: 0;
     font-family: "TT Lakes", sans-serif;
+    height: 100%;
 }
 ul{
     list-style: none;
@@ -49,22 +50,22 @@ ul{
 }
 .main__services-item--visible-xl{display: none;}
 .menu__button{
-    background-image: url('./images/burgermenubar.png');
+    background-image: url('/images/burgermenubar.png');
 }
 .icons__repair-button{
-    background-image: url('images/repairrepair.png');
+    background-image: url('/images/repairrepair.png');
 }
 .icons__contacts-button{
-    background: url('../images/icon23.png') no-repeat 50% 50%;
+    background: url('/images/icon23.png') no-repeat 50% 50%;
 }
 .icons__message-button{
-    background: url('images/iconmessage.png') no-repeat 50% 50%;
+    background: url('/images/iconmessage.png') no-repeat 50% 50%;
 }
 .icons__profile-button{
-    background: url('images/Groupprofile.png') no-repeat 50% 50%;
+    background: url('/images/Groupprofile.png') no-repeat 50% 50%;
 }
 .icons__search-button{
-    background-image: url('images/checkstatussearch.png');
+    background-image: url('/images/checkstatussearch.png');
 }
 .header__divider--visible-m{
     display: none;
@@ -81,6 +82,9 @@ ul{
 }
 .icons--visible-m{
     display: none;
+}
+.main{
+    height: 100%;
 }
 @media  (max-width: 767px) {
     .icons{display: flex;
@@ -184,7 +188,7 @@ ul{
 }
 
 /* для планшета */
-@media (min-width: 768px) and (max-width: 1120px) {
+@media (min-width: 768px) and (max-width: 1119px) {
     .menu__button, .icons input{
         border: 0;
         width: 40px;
@@ -201,7 +205,7 @@ ul{
     .icons--visible-m{display: block;}
     .container{
         justify-content: space-between;
-        margin: 5% ; 
+     margin: 2% 0; 
         margin-left: auto;
         margin-right: auto;
         width: 100%;
@@ -231,75 +235,78 @@ ul{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    margin: 3% 0;
    }
    
    .main__title{
-    padding-left: 2%;
+    padding-left: 3%;
+ 
     font-family:  'TT bold', sans-serif;
    }
+
    .wrapper{
+    display: grid;
     background-color:  #F8F8F8;
-    height: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+     'header header'
+    'services services'
+    'text photo'
+    'text photo';
+    margin-right: 2%;
 
    }
    .main__description--hidden-s{
     display: block;
    }
-    /* .main__title{
-        font-family:  'TT bold', sans-serif;
-        position: relative;
-        min-width: 90%;
-        padding-left: 5%;
-        margin: 0;
-    }
-    .title-highlight{
-        position: absolute;
-        top: -5px;
-        left:0;
-    }
-    .main{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        
-    }
-    .main__services{
-        display: flex;
-        flex-wrap: nowrap;
-        overflow: scroll;
-        padding: 0;
-        margin: 0;
-        margin-top: 5%;
-        
-    }
-    .main__services::-webkit-scrollbar { display: none; }
+   .main__title-highlight{grid-area:  header;}
+   .main__services{
+    grid-area: services;
+   }
+   .main__services{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3%;
+}
+.main__services::-webkit-scrollbar { display: none; }
     .main__services-item{
         font-size: 16px;
         line-height: 24px;
         color:  #7E7E82;
         text-align: center;
-        padding: 5px;
         white-space: nowrap;
-        margin-left: 5%;
         border-radius: 5px;
         text-decoration: none;
-        padding: 5px 5%;
-  
+        padding:  5px 2%;
     }
     .main__services-item--active{
         border: 2px solid #B8FFEC;
-     
+        margin-left: 3%;
     }
+   .main__cpsPhoto{
+    transform: scale(1.13);
+
+   }
+   .main__image{
+    grid-area: photo;
+    margin-right: 2%;
+    margin-left: 3%;
+    margin-top: 3%;
+    margin-bottom: 15%;
+  
+   }
     .main__description{
        font-size: 14px;
        line-height: 18px;
-       width: 90%;
        padding: 0 5%;
-       margin-top: 5%;
     }
-    .main__showMore{
+    .text-container{
+        grid-area: text;
+       }
+       .main__showMore{
         margin-bottom: 5%;
         
     }
@@ -312,10 +319,118 @@ ul{
         margin-left: 5%;
        
     }
-    .main__image{
-        display: flex;
-        flex-direction: column;
-        align-items: end;
+}
+@media (min-width:1120px) {
+    .header{display: none;}
+    
+    .main__services-item--hidden-xl{display: none;}
+    .main__services-item--visible-xl{display: block;}
+    .main__description--visible-xl{display: inline;
+}
+    .main__description--hidden-s{display: inline;}
+    
+    .main__services-item{
+        font-size: 16px;
+        line-height: 24px;
+        color:  #7E7E82;
+        text-align: center;
+        white-space: nowrap;
+        border-radius: 5px;
+        text-decoration: none;
+        padding:  5px 2%;
     }
-     */
+    .main__services-item--active--xl{
+            border: 2px solid #B8FFEC;
+            margin-left: 2%;
+    }
+    .main__title-highlight{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 3% 0;
+        grid-area: header;
+       }
+       
+       .main__title{
+        padding-left: 3%;
+        font-family:  'TT bold', sans-serif;
+       }
+    body{
+        background-color:#F8F8F8 ;
+    }
+       .wrapper{
+        display: grid;
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+         'header icons'
+        'services services'
+        'services services'
+        'text photo'
+        'text photo';
+       
+       }
+    .main__description{
+        font-size: 14px;
+        line-height: 20px;
+       
+        letter-spacing: 0.2px;
+        
+     }
+     .text-container{
+         grid-area: text;
+         margin-left: 5%;
+        }
+   
+     .main__showMore-button{
+         color:black ;
+         text-decoration: none ;
+     }
+     
+     .main__showMore-icon{
+        padding-right: 10px;  
+    }
+    .main__image{
+        grid-area: photo;
+        transform: scale(1.6);
+        margin: auto;
+        margin-top: 10%;
+    }
+       .main__services{
+        display: flex;
+        flex-wrap: wrap; 
+        padding: 0;
+        margin: 0;
+        margin-bottom: 3%;
+        grid-area: services;
+    }
+    .icon--visible-xl{
+        grid-area: icons;
+    display: flex;
+    justify-content: end;
+    gap: 5%;
+margin-right: 5%;}
+   .icon--visible-xl input {
+        border: 0;
+        width: 40px;
+        height: 40px;
+        background-color: #FF3E79;
+        border-radius: 100%;
+    }
+    .icon--visible-xl > li{
+        display: flex;
+        align-items: center;
+    }
+    .icon__repair-button{
+        margin-left: 10px;
+        background-image: url('/images/repairrepair.png');
+    }
+    .icon__search-button{
+        margin-left: 10px;
+        background-image: url('/images/checkstatussearch.png');
+    }
+    .main__services-item--larger-xl{
+        padding-top: 1%;
+        padding-left: 4%;
+    }
 }
