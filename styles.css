@@ -49,22 +49,22 @@ ul{
 }
 .main__services-item--visible-xl{display: none;}
 .menu__button{
-    background-image: url('/images/burgermenubar.png');
+    background-image: url('images/burgermenubar.png');
 }
 .icons__repair-button{
-    background-image: url('/images/repairrepair.png');
+    background-image: url('images/repairrepair.png');
 }
 .icons__contacts-button{
-    background: url('/images/icon23.png') no-repeat 50% 50%;
+    background: url('images/icon23.png') no-repeat 50% 50%;
 }
 .icons__message-button{
-    background: url('/images/iconmessage.png') no-repeat 50% 50%;
+    background: url('images/iconmessage.png') no-repeat 50% 50%;
 }
 .icons__profile-button{
-    background: url('/images/Groupprofile.png') no-repeat 50% 50%;
+    background: url('images/Groupprofile.png') no-repeat 50% 50%;
 }
 .icons__search-button{
-    background-image: url('/images/checkstatussearch.png');
+    background-image: url('images/checkstatussearch.png');
 }
 .header__divider--visible-m{
     display: none;
