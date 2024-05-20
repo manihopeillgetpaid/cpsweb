@@ -36,9 +36,7 @@ ul{
     width: 100%;
  
 }
-.header__second-divider{
-    display: none;
-}
+
 .icon--visible-xl{
     display: none;
 }
@@ -88,13 +86,7 @@ ul{
 .main{
     height: 100%;
 }
-.icons .icons__divider{
-    width: 2px;
-    height: 32px;
-    background-color: 
-    #EAEAEA;
-}
-.icons .icons__divider--visible-m{display: none;}
+
 
 @media  (max-width: 767px) {
     .icons{display: flex;
@@ -222,9 +214,7 @@ ul{
     .header__divider--visible-m{
         display: block;  
         align-self: center;
-        width: 2px;
-    height: 32px;
-    background-color: #EAEAEA;
+        
     }
    
    .logo{
@@ -328,7 +318,7 @@ ul{
         margin-left: 5%;
        
     }
-    .icons .icons__divider--visible-m{display: block;}
+   
 }
 @media (min-width:1120px) {
     .header{display: none;}
