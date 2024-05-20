@@ -36,6 +36,9 @@ ul{
     width: 100%;
  
 }
+.header__second-divider{
+    display: none;
+}
 .icon--visible-xl{
     display: none;
 }
@@ -49,7 +52,7 @@ ul{
     #EAEAEA;
 }
 .main__services-item--visible-xl{display: none;}
-.main__services-item--active--xl{display: none;}
+.main__services-item--active-xl{display: none;}
 .menu__button{
     background-image: url('images/burgermenubar.png');
 }
@@ -68,9 +71,7 @@ ul{
 .icons__search-button{
     background-image: url('images/checkstatussearch.png');
 }
-.header__divider--visible-m{
-    display: none;
-}
+
 .main__description--hidden-s{
     display: none;
 }
@@ -87,6 +88,14 @@ ul{
 .main{
     height: 100%;
 }
+.icons .icons__divider{
+    width: 2px;
+    height: 32px;
+    background-color: 
+    #EAEAEA;
+}
+.icons .icons__divider--visible-m{display: none;}
+
 @media  (max-width: 767px) {
     .icons{display: flex;
         gap: 20%;
@@ -201,7 +210,6 @@ ul{
     gap: 10%;
     justify-content: end;
     /* width: 100%; */
-  
     }
     .icons--visible-m{display: block;}
     .container{
@@ -218,10 +226,7 @@ ul{
     height: 32px;
     background-color: #EAEAEA;
     }
-    .icons .header__second-divider--visible-m{
-        display: block;
-    
-   }
+   
    .logo{
     margin: 0;
     margin-right: auto;
@@ -323,6 +328,7 @@ ul{
         margin-left: 5%;
        
     }
+    .icons .icons__divider--visible-m{display: block;}
 }
 @media (min-width:1120px) {
     .header{display: none;}
@@ -343,7 +349,7 @@ ul{
         text-decoration: none;
         padding:  5px 2%;
     }
-    .main__services-item--active--xl{
+    .main__services-item--active-xl{
             border: 2px solid #B8FFEC;
             margin-left: 2%;
     }
