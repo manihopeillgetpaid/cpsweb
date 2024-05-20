@@ -427,11 +427,11 @@ margin-right: 5%;}
     }
     .icon__repair-button{
         margin-left: 10px;
-        background-image: url('/images/repairrepair.png');
+        background-image: url('images/repairrepair.png');
     }
     .icon__search-button{
         margin-left: 10px;
-        background-image: url('/images/checkstatussearch.png');
+        background-image: url('images/checkstatussearch.png');
     }
     .main__services-item--larger-xl{
         padding-top: 1%;
