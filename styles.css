@@ -49,6 +49,7 @@ ul{
     #EAEAEA;
 }
 .main__services-item--visible-xl{display: none;}
+.main__services-item--active--xl{display: none;}
 .menu__button{
     background-image: url('images/burgermenubar.png');
 }
