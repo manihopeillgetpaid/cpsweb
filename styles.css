@@ -36,7 +36,9 @@ ul{
     width: 100%;
  
 }
-
+.header__second-divider{
+    display: none;
+}
 .icon--visible-xl{
     display: none;
 }
@@ -86,10 +88,16 @@ ul{
 .main{
     height: 100%;
 }
-
+ .icons__divider{
+    width: 2px;
+    height: 32px;
+    background-color: 
+    #EAEAEA;
+}
+.header__divider--visible-m{display: none;}
 
 @media  (max-width: 767px) {
-    .icons{display: flex;
+    .iconsM, .iconsUsual{display: flex;
         gap: 20%;
         margin-right: 5%;
        
@@ -112,7 +120,7 @@ ul{
         width: 100%;
     }
     .header__divider{
-        margin-right: 2%;
+        margin-left: 2%;
     }
     
     .main__title-highlight{
@@ -191,19 +199,30 @@ ul{
 
 /* для планшета */
 @media (min-width: 768px) and (max-width: 1119px) {
-    .menu__button, .icons input{
+    .menu__button, .iconsM input, .iconsUsual input{
         border: 0;
         width: 40px;
         height: 40px;
         background-color: #FF3E79;
         border-radius: 100%;
     }
-    .icons{display: flex;
-    gap: 10%;
+    .iconsM, .iconsUsual{display: flex;
+    
     justify-content: end;
     /* width: 100%; */
     }
+    .iconsM{
+        gap: 10%;
+        margin-right: 3%;
+    }
+    .iconsUsual{
+        gap: 10%;
+    }
+    
     .icons--visible-m{display: block;}
+    .icons__search-button{
+        margin-left: 5%;
+    }
     .container{
         justify-content: space-between;
      margin: 2% 0; 
@@ -214,7 +233,11 @@ ul{
     .header__divider--visible-m{
         display: block;  
         align-self: center;
-        
+        width: 2px;
+    height: 32px;
+    background-color: #EAEAEA; 
+    margin-right: 4%;
+      
     }
    
    .logo{
@@ -318,7 +341,7 @@ ul{
         margin-left: 5%;
        
     }
-   
+
 }
 @media (min-width:1120px) {
     .header{display: none;}
