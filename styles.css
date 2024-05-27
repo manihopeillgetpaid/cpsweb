@@ -21,7 +21,7 @@
 
 
 body{
-    width: 100%;
+   
     margin: 0;
     font-family: "TT Lakes", sans-serif;
     height: 100%;
@@ -29,13 +29,14 @@ body{
 ul{
     list-style: none;
 }
-.container{
+
+/* .container{
     display: flex;
     align-items: start;
    box-sizing: border-box;
-    width: 100%;
- 
-}
+        width: 100%;}
+  */
+
 .header__second-divider{
     display: none;
 }
@@ -78,7 +79,7 @@ ul{
 .main__description--visible-xl{
     display: none;
 }
-.header{width: 100%;}
+/* .header{width: 100vw;} */
 .header__divider--visible-s{
     display: none;
 }
@@ -97,10 +98,10 @@ ul{
 .header__divider--visible-m{display: none;}
 
 @media  (max-width: 767px) {
+ 
     .iconsM, .iconsUsual{display: flex;
         gap: 20%;
         margin-right: 5%;
-       
         }
     .menu__button, .icons__repair-button, .icons__search-button{
         border: 0;
@@ -108,22 +109,23 @@ ul{
         height: 40px;
         background-color: #FF3E79;
         border-radius: 100%;
+        
     }
     .header__divider--visible-s{
         display: block;
     }
    
-    .container{
-        justify-content: space-between;
+    .header{display: flex;
+        justify-content: space-around;
         align-items: center;
-        padding: 5%;
-        width: 100%;
+     padding: 5% 2%;
+        margin: 0;
     }
     .header__divider{
         margin-left: 2%;
     }
-    
-    .main__title-highlight{
+
+.main__title-highlight{
         display: flex;
         justify-content: flex-start;
     }
@@ -172,7 +174,7 @@ ul{
     .main__description{
        font-size: 14px;
        line-height: 18px;
-       width: 90%;
+       width: 100%;
        padding: 0 5%;
        margin-top: 5%;
     }
@@ -192,13 +194,20 @@ ul{
     .main__image{
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: start; 
+        margin-left: 5%;
     }
     
 }
-
 /* для планшета */
-@media (min-width: 768px) and (max-width: 1119px) {
+ @media (min-width: 768px) and (max-width: 1119px) {
+    .header{
+        display: flex;
+        justify-content: space-between;
+     margin: 2% 3%;
+ 
+      
+    }
     .menu__button, .iconsM input, .iconsUsual input{
         border: 0;
         width: 40px;
@@ -207,29 +216,18 @@ ul{
         border-radius: 100%;
     }
     .iconsM, .iconsUsual{display: flex;
-    
-    justify-content: end;
-    /* width: 100%; */
-    }
-    .iconsM{
         gap: 10%;
         margin-right: 3%;
-    }
-    .iconsUsual{
-        gap: 10%;
-    }
+    justify-content: center;
+    /* width: 100%; */
+     }
+    
     
     .icons--visible-m{display: block;}
     .icons__search-button{
         margin-left: 5%;
     }
-    .container{
-        justify-content: space-between;
-     margin: 2% 0; 
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-    }
+   
     .header__divider--visible-m{
         display: block;  
         align-self: center;
@@ -346,12 +344,19 @@ ul{
 @media (min-width:1120px) {
     .header{display: none;}
     
-    .main__services-item--hidden-xl{display: none;}
-    .main__services-item--visible-xl{display: block;}
+    .main__services-item--hidden-xl{display: none;
+    }
+    .main__services-item--visible-xl{display: block;
+    }
     .main__description--visible-xl{display: inline;
 }
     .main__description--hidden-s{display: inline;}
-    
+    .main__services{
+        align-items: center;
+    }
+    .main__services-item--larger-xl{
+        margin-left: 2%;
+    }
     .main__services-item{
         font-size: 16px;
         line-height: 24px;
@@ -365,6 +370,8 @@ ul{
     .main__services-item--active-xl{
             border: 2px solid #B8FFEC;
             margin-left: 2%;
+             align-self: center; 
+
     }
     .main__title-highlight{
         display: flex;
@@ -452,8 +459,5 @@ margin-right: 5%;}
         margin-left: 10px;
         background-image: url('images/checkstatussearch.png');
     }
-    .main__services-item--larger-xl{
-        padding-top: 1%;
-        padding-left: 4%;
-    }
+
 }
