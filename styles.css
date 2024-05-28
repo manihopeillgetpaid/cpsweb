@@ -100,8 +100,8 @@ ul{
 @media  (max-width: 767px) {
  
     .iconsM, .iconsUsual{display: flex;
-        gap: 20%;
-        margin-right: 5%;
+        gap: 16px;
+   
         }
     .menu__button, .icons__repair-button, .icons__search-button{
         border: 0;
@@ -111,18 +111,23 @@ ul{
         border-radius: 100%;
         
     }
+   
     .header__divider--visible-s{
         display: block;
+
     }
-   
+   .logo__image{
+    margin-left: 5px;
+   }
     .header{display: flex;
         justify-content: space-around;
         align-items: center;
-     padding: 5% 2%;
+     padding: 20px 16px;
         margin: 0;
     }
+  
     .header__divider{
-        margin-left: 2%;
+        margin-left: 5px;
     }
 
 .main__title-highlight{
@@ -131,7 +136,7 @@ ul{
     }
     .main__title{
         font-family:  'TT bold', sans-serif;
-        padding-left: 5%;  
+        padding-left: 15px;  
         position: relative;
     }
     .title__decoration{
@@ -150,7 +155,7 @@ ul{
         overflow: scroll;
         padding: 0;
         margin: 0;
-        margin-top: 5%;
+        margin-top: 10px;
         
     }
     .main__services::-webkit-scrollbar { display: none; }
@@ -159,12 +164,11 @@ ul{
         line-height: 24px;
         color:  #7E7E82;
         text-align: center;
-        padding: 5px;
         white-space: nowrap;
-        margin-left: 5%;
+        margin-left: 15px;
         border-radius: 5px;
         text-decoration: none;
-        padding: 5px 5%;
+        padding: 5px 15px;
   
     }
     .main__services-item--active{
@@ -175,11 +179,11 @@ ul{
        font-size: 14px;
        line-height: 18px;
        width: 100%;
-       padding: 0 5%;
-       margin-top: 5%;
+       padding: 0 15px;
+       margin-top: 25px;
     }
     .main__showMore{
-        margin-bottom: 5%;
+        margin-bottom: 10px;
         
     }
     .main__showMore-button{
@@ -188,25 +192,26 @@ ul{
     }
     .main__showMore-icon{
         padding: 10px;
-        margin-left: 5%;
+        margin-left: 15px;
        
     }
     .main__image{
         display: flex;
         flex-direction: column;
         align-items: start; 
-        margin-left: 5%;
+       
     }
-    
+    .main__cpsPhoto{
+        width: 100%;
+    }
 }
 /* для планшета */
  @media (min-width: 768px) and (max-width: 1119px) {
     .header{
         display: flex;
         justify-content: space-between;
-     margin: 2% 3%;
- 
-      
+     margin: 24px;
+     align-items: center;
     }
     .menu__button, .iconsM input, .iconsUsual input{
         border: 0;
@@ -216,38 +221,32 @@ ul{
         border-radius: 100%;
     }
     .iconsM, .iconsUsual{display: flex;
-        gap: 10%;
-        margin-right: 3%;
+        gap: 16px;
+        margin-right: 16px;
     justify-content: center;
     /* width: 100%; */
      }
     
-    
     .icons--visible-m{display: block;}
-    .icons__search-button{
-        margin-left: 5%;
-    }
    
     .header__divider--visible-m{
         display: block;  
-        align-self: center;
         width: 2px;
     height: 32px;
     background-color: #EAEAEA; 
-    margin-right: 4%;
-      
+    margin-right: 20px;
+    margin-left: 4px;
     }
    
    .logo{
     margin: 0;
     margin-right: auto;
-    margin-left: 4%;
     padding: 0;
    }
    .menu{
     margin: 0;
     padding: 0;
-    margin-right: 4%;
+    margin-right: 20px;
    }
 
  
@@ -255,11 +254,11 @@ ul{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 3% 0;
+    margin: 24px 0;
    }
    
    .main__title{
-    padding-left: 3%;
+    padding-left: 20px;
  
     font-family:  'TT bold', sans-serif;
    }
@@ -273,8 +272,8 @@ ul{
     'services services'
     'text photo'
     'text photo';
-    margin-right: 2%;
-
+    margin-right: 15px;
+    column-gap: 50px;
    }
    .main__description--hidden-s{
     display: block;
@@ -289,7 +288,8 @@ ul{
     overflow: scroll;
     padding: 0;
     margin: 0;
-    margin-bottom: 3%;
+    margin-bottom: 32px;
+    align-items: center;
 }
 .main__services::-webkit-scrollbar { display: none; }
     .main__services-item{
@@ -300,43 +300,40 @@ ul{
         white-space: nowrap;
         border-radius: 5px;
         text-decoration: none;
-        padding:  5px 2%;
+        padding:  5px 15px;
     }
     .main__services-item--active{
         border: 2px solid #B8FFEC;
-        margin-left: 3%;
+        margin-left: 24px;
     }
    .main__cpsPhoto{
-    transform: scale(1.13);
-
-   }
-   .main__image{
     grid-area: photo;
-    margin-right: 2%;
-    margin-left: 3%;
-    margin-top: 3%;
-    margin-bottom: 15%;
+    border-radius: 10px;
+    /* margin-right: 2%;
+    margin-left: 3%; */
+    /* margin-top: 3%;
+    margin-bottom: 15%; */
+margin: 0;
+  /* transform:  translate(-10px,-5px); */
+  width:100%;
   
    }
     .main__description{
        font-size: 14px;
        line-height: 18px;
-       padding: 0 5%;
+       padding: 0 24px;
     }
     .text-container{
         grid-area: text;
        }
-       .main__showMore{
-        margin-bottom: 5%;
-        
-    }
+  
     .main__showMore-button{
         color:black ;
         text-decoration: none ;
     }
     .main__showMore-icon{
         padding: 10px;
-        margin-left: 5%;
+        margin-left: 24px;
        
     }
 
@@ -351,11 +348,10 @@ ul{
     .main__description--visible-xl{display: inline;
 }
     .main__description--hidden-s{display: inline;}
-    .main__services{
-        align-items: center;
-    }
+  
     .main__services-item--larger-xl{
-        margin-left: 2%;
+        margin-left: 32px;
+    
     }
     .main__services-item{
         font-size: 16px;
@@ -365,24 +361,27 @@ ul{
         white-space: nowrap;
         border-radius: 5px;
         text-decoration: none;
-        padding:  5px 2%;
+        padding:  5px 20px;
+        
     }
     .main__services-item--active-xl{
             border: 2px solid #B8FFEC;
-            margin-left: 2%;
+            margin-left: 32px;
              align-self: center; 
+       
 
     }
     .main__title-highlight{
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        margin: 3% 0;
+        margin: 0;
+        margin-top: 42px;
         grid-area: header;
        }
        
        .main__title{
-        padding-left: 3%;
+        padding-left: 32px;
         font-family:  'TT bold', sans-serif;
        }
     body{
@@ -390,7 +389,7 @@ ul{
     }
        .wrapper{
         display: grid;
-        
+        column-gap: 40px;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
          'header icons'
@@ -403,13 +402,12 @@ ul{
     .main__description{
         font-size: 14px;
         line-height: 20px;
-       
-        letter-spacing: 0.2px;
-        
+        letter-spacing: 0.2px;   
      }
      .text-container{
          grid-area: text;
-         margin-left: 5%;
+         margin-left: 32px;
+         margin-top: 15px;
         }
    
      .main__showMore-button{
@@ -418,28 +416,33 @@ ul{
      }
      
      .main__showMore-icon{
-        padding-right: 10px;  
+        padding-right: 10px;
+        margin-left: 7px;  
     }
-    .main__image{
+    .main__cpsPhoto{
         grid-area: photo;
-        transform: scale(1.6);
+      padding: 35px 62px 15px 20px;
         margin: auto;
-        margin-top: 10%;
+        width: 100%;
+        border-radius: 25px;
+        transform: scale(1.15);
     }
-       .main__services{
+ .main__services{
         display: flex;
         flex-wrap: wrap; 
         padding: 0;
         margin: 0;
-        margin-bottom: 3%;
         grid-area: services;
+        align-items: center;
     }
+   
     .icon--visible-xl{
         grid-area: icons;
     display: flex;
     justify-content: end;
-    gap: 5%;
-margin-right: 5%;}
+    gap: 32px;
+margin-right: 32px;
+margin-top: 45px;}
    .icon--visible-xl input {
         border: 0;
         width: 40px;
