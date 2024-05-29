@@ -198,7 +198,17 @@ img.menu-title__decoration{
     gap: 7px;
     margin: 0;
     margin-bottom: 32px;
- 
+}
+.menu-footer__language a{
+    text-decoration: none;
+    color: black;
+}
+.menu-footer__language a:hover:not(:first-child){
+    color: #FF3E79;
+    transform: scale(1.1);
+}
+a.menu-footer__language-ru--active{
+    color: #7E7E82;
 }
 @media  (max-width: 767px) {
  
