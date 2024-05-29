@@ -124,6 +124,12 @@ border: 0;
         height: 40px;
         background-color: #FF3E79;
         border-radius: 100%;}
+.menu-header__button-close:hover, .menu-header__button-search:hover, 
+        .menu-footer__button-phone:hover, .menu-footer__button-message:hover,
+         .menu-footer__button-profile:hover{
+            opacity: 0.9;
+            transform: scale(1.1);
+         }
 .menu-header__button-close{
     background: url('images/burger.png') no-repeat ;
     margin-left: 24px;
